@@ -16,6 +16,10 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+    public List<User> readAll() {
+        return null;
+    }
+
     @Override
     public User readByLogin(String login) {
         return this.userDAO.getUserMap()

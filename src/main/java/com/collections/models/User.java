@@ -9,14 +9,12 @@ public class User {
     private String password;
     private String email;
     private String phone;
-    private UserDAO userDAO = new UserDAO();
 
     public User(String login, String password, String email, String phone) {
         this.login = login;
         this.password = password;
         this.email = email;
         this.phone = phone;
-        this.userDAO.add(this);
     }
 
     public String getLogin() {

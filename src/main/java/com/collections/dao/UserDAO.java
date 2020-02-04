@@ -8,6 +8,7 @@ import java.util.Map;
 public class UserDAO {
 
     private Map<Integer, User> userMap;
+    private static Integer index = 0;
 
     public UserDAO() {
         userMap = new HashMap<>();
@@ -18,6 +19,6 @@ public class UserDAO {
     }
 
     public void add(User user) {
-        userMap.put(userMap.size(), user);
+        userMap.put(index++, user);
     }
 }

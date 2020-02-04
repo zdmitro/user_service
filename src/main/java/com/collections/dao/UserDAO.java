@@ -7,18 +7,17 @@ import java.util.Map;
 
 public class UserDAO {
 
-    private static int index = 0;
     private Map<Integer, User> userMap;
 
     public UserDAO() {
-        this.userMap = new HashMap<>();
+        userMap = new HashMap<>();
     }
 
     public Map<Integer, User> getUserMap() {
-        return this.userMap;
+        return userMap;
     }
 
     public void add(User user) {
-        this.userMap.put(index++, user);
+        userMap.put(userMap.size(), user);
     }
 }

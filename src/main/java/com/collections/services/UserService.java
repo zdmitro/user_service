@@ -28,11 +28,17 @@ public interface UserService {
      */
     User readByLogin(String login);
     User readByEmail(String email);
+    User readById(Integer id);
+    List<User> readAllUsers();
+
     User readByPhone(String phone);
 
     void update(User user, List<String> dataList);
 
-    boolean delete(User user);
+    boolean deleteByUser(User user);
+    boolean deleteById(Integer id);
+
+    void printAllUsers();
 
 
 }
